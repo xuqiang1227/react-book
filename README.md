@@ -1,2 +1,2 @@
-# xiaoyi.github.com
+# xiaoyi.github.io
 This is my first page.
