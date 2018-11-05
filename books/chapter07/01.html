@@ -775,61 +775,59 @@
 <h2 id="es6&#x7684;&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x636E;">ES6&#x7684;&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x636E;</h2>
 <ul>
 <li><p>&#x89E3;&#x6784;&#x8D4B;&#x503C;</p>
-<p> &#x89E3;&#x6784;&#x8D4B;&#x503C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE; <code>Object</code> &#x6216;&#x8005; <code>Array</code> &#x4E2D;&#x76F4;&#x63A5;&#x62FF;&#x5230;&#x6570;&#x636E;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x3002;</p>
-<pre><code class="lang-js"> <span class="hljs-comment">//&#x5BF9;&#x8C61;</span>
- <span class="hljs-keyword">const</span> user = {name: <span class="hljs-string">&apos;react&apos;</span>, language: <span class="hljs-string">&apos;js&apos;</span>};
- <span class="hljs-keyword">const</span> {name, language} = user;
- <span class="hljs-built_in">console</span>.log(name, language); <span class="hljs-comment">// react js</span>
+<p>  &#x89E3;&#x6784;&#x8D4B;&#x503C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE; <code>Object</code> &#x6216;&#x8005; <code>Array</code> &#x4E2D;&#x76F4;&#x63A5;&#x62FF;&#x5230;&#x6570;&#x636E;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x3002;</p>
+<pre><code class="lang-js">  <span class="hljs-comment">//&#x5BF9;&#x8C61;</span>
+  <span class="hljs-keyword">const</span> user = {name: <span class="hljs-string">&apos;react&apos;</span>, language: <span class="hljs-string">&apos;js&apos;</span>};
+  <span class="hljs-keyword">const</span> {name, language} = user;
+  <span class="hljs-built_in">console</span>.log(name, language); <span class="hljs-comment">// react js</span>
 
- <span class="hljs-comment">//&#x6570;&#x7EC4;</span>
- <span class="hljs-keyword">const</span> list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
- <span class="hljs-keyword">const</span> [foo, baz] = list;
- <span class="hljs-built_in">console</span>.log(foo, baz); <span class="hljs-comment">// 1 2</span>
+  <span class="hljs-comment">//&#x6570;&#x7EC4;</span>
+  <span class="hljs-keyword">const</span> list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+  <span class="hljs-keyword">const</span> [foo, baz] = list;
+  <span class="hljs-built_in">console</span>.log(foo, baz); <span class="hljs-comment">// 1 2</span>
 </code></pre>
-<p> &#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x89E3;&#x6784;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-js"> <span class="hljs-keyword">const</span> user = {name: <span class="hljs-string">&apos;react&apos;</span>, language: <span class="hljs-string">&apos;js&apos;</span>};
- <span class="hljs-keyword">const</span> logUser = ({name, language}) =&gt; {
-   <span class="hljs-built_in">console</span>.log(name, language);
- };
- logUser(user);
- <span class="hljs-comment">// react js</span>
+<p>  &#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x89E3;&#x6784;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> user = {name: <span class="hljs-string">&apos;react&apos;</span>, language: <span class="hljs-string">&apos;js&apos;</span>};
+  <span class="hljs-keyword">const</span> logUser = ({name, language}) =&gt; {
+    <span class="hljs-built_in">console</span>.log(name, language);
+  };
+  logUser(user);
+  <span class="hljs-comment">// react js</span>
 </code></pre>
-<p> &#x51FD;&#x6570;&#x53C2;&#x6570;&#x5728;&#x89E3;&#x6784;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#xFF0C;&#x8BA9;&#x53C2;&#x6570;&#x66F4;&#x6709;&#x610F;&#x4E49;&#xFF1A;</p>
-<pre><code class="lang-js"> <span class="hljs-keyword">const</span> logUser = ({payload: user}) =&gt; {
-   <span class="hljs-built_in">console</span>.log(user.name);
- }
+<p>  &#x51FD;&#x6570;&#x53C2;&#x6570;&#x5728;&#x89E3;&#x6784;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#xFF0C;&#x8BA9;&#x53C2;&#x6570;&#x66F4;&#x6709;&#x610F;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> logUser = ({payload: user}) =&gt; {
+    <span class="hljs-built_in">console</span>.log(user.name);
+  }
 
- logUser({payload: {name: <span class="hljs-string">&apos;react&apos;</span>}});
- <span class="hljs-comment">// react</span>
-</code></pre>
-<ul>
-<li><p>&#x5BF9;&#x8C61;&#x7684;&#x5B57;&#x9762;&#x91CF;&#x5B9A;&#x4E49;</p>
-<p>&#x5BF9;&#x8C61;&#x89E3;&#x6784;&#x7684;&#x53CD;&#x5411;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> name = <span class="hljs-string">&apos;react&apos;</span>, language = <span class="hljs-string">&apos;js&apos;</span>;
-
-<span class="hljs-keyword">const</span> user = {name, language};
-<span class="hljs-comment">//&#x7B49;&#x540C;&#x4E8E;&#xFF1A;</span>
-<span class="hljs-keyword">const</span> otherUser = {name: name, language: language};
-</code></pre>
-<p>&#x53E6;&#x5916;&#x5728;&#x5BF9;&#x8C61;&#x4E2D;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x7701;&#x7565; <code>function</code> &#x5173;&#x952E;&#x5B57;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> user = {
- name: <span class="hljs-string">&apos;react&apos;</span>,
- getDetail() {
-   <span class="hljs-comment">//do something</span>
- }
-}
-
-<span class="hljs-comment">//&#x7B49;&#x540C;&#x4E8E;&#xFF1A;</span>
-
-<span class="hljs-keyword">const</span> otherUser = {
- name: <span class="hljs-string">&apos;react&apos;</span>,
- getDetail: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-   <span class="hljs-comment">// do something</span>
- }
-}
+  logUser({payload: {name: <span class="hljs-string">&apos;react&apos;</span>}});
+  <span class="hljs-comment">// react</span>
 </code></pre>
 </li>
-</ul>
+<li><p>&#x5BF9;&#x8C61;&#x7684;&#x5B57;&#x9762;&#x91CF;&#x5B9A;&#x4E49;</p>
+<p>  &#x5BF9;&#x8C61;&#x89E3;&#x6784;&#x7684;&#x53CD;&#x5411;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> name = <span class="hljs-string">&apos;react&apos;</span>, language = <span class="hljs-string">&apos;js&apos;</span>;
+
+  <span class="hljs-keyword">const</span> user = {name, language};
+  <span class="hljs-comment">//&#x7B49;&#x540C;&#x4E8E;&#xFF1A;</span>
+  <span class="hljs-keyword">const</span> otherUser = {name: name, language: language};
+</code></pre>
+<p>  &#x53E6;&#x5916;&#x5728;&#x5BF9;&#x8C61;&#x4E2D;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x7701;&#x7565; <code>function</code> &#x5173;&#x952E;&#x5B57;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> user = {
+    name: <span class="hljs-string">&apos;react&apos;</span>,
+    getDetail() {
+      <span class="hljs-comment">//do something</span>
+    }
+  }
+
+  <span class="hljs-comment">//&#x7B49;&#x540C;&#x4E8E;&#xFF1A;</span>
+
+  <span class="hljs-keyword">const</span> otherUser = {
+    name: <span class="hljs-string">&apos;react&apos;</span>,
+    getDetail: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-comment">// do something</span>
+    }
+  }
+</code></pre>
 </li>
 </ul>
 <h2 id="&#x5C55;&#x5F00;&#x7B26;-">&#x5C55;&#x5F00;&#x7B26; (<code>...</code>)</h2>
@@ -963,7 +961,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ES6（ES2015）","level":"1.8.1","depth":2,"next":{"title":"ES7（ES2016）","level":"1.8.2","depth":2,"path":"books/chapter07/02.md","ref":"./books/chapter07/02.md","articles":[]},"previous":{"title":"浅谈ES","level":"1.8","depth":1,"path":"books/chapter07/00.md","ref":"./books/chapter07/00.md","articles":[{"title":"ES6（ES2015）","level":"1.8.1","depth":2,"path":"books/chapter07/01.md","ref":"./books/chapter07/01.md","articles":[]},{"title":"ES7（ES2016）","level":"1.8.2","depth":2,"path":"books/chapter07/02.md","ref":"./books/chapter07/02.md","articles":[]},{"title":"ES8（ES2017）","level":"1.8.3","depth":2,"path":"books/chapter07/03.md","ref":"./books/chapter07/03.md","articles":[]},{"title":"ES9（ES2018）","level":"1.8.4","depth":2,"path":"books/chapter07/04.md","ref":"./books/chapter07/04.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/chapter07/01.md","mtime":"2018-11-05T03:25:12.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-05T06:47:44.096Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ES6（ES2015）","level":"1.8.1","depth":2,"next":{"title":"ES7（ES2016）","level":"1.8.2","depth":2,"path":"books/chapter07/02.md","ref":"./books/chapter07/02.md","articles":[]},"previous":{"title":"浅谈ES","level":"1.8","depth":1,"path":"books/chapter07/00.md","ref":"./books/chapter07/00.md","articles":[{"title":"ES6（ES2015）","level":"1.8.1","depth":2,"path":"books/chapter07/01.md","ref":"./books/chapter07/01.md","articles":[]},{"title":"ES7（ES2016）","level":"1.8.2","depth":2,"path":"books/chapter07/02.md","ref":"./books/chapter07/02.md","articles":[]},{"title":"ES8（ES2017）","level":"1.8.3","depth":2,"path":"books/chapter07/03.md","ref":"./books/chapter07/03.md","articles":[]},{"title":"ES9（ES2018）","level":"1.8.4","depth":2,"path":"books/chapter07/04.md","ref":"./books/chapter07/04.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/chapter07/01.md","mtime":"2018-11-05T09:42:17.111Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-05T09:42:29.646Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
