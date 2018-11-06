@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>实例属性 · GitBook</title>
+        <title>ES8 (ES2017) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter05/00.html" />
+    <link rel="next" href="04.html" />
     
     
     <link rel="prev" href="02.html" />
@@ -341,9 +341,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="00.html">
+        <li class="chapter " data-level="1.5" data-path="../chapter04/00.html">
             
-                <a href="00.html">
+                <a href="../chapter04/00.html">
             
                     
                     组件其他方法
@@ -355,9 +355,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="01.html">
+        <li class="chapter " data-level="1.5.1" data-path="../chapter04/01.html">
             
-                <a href="01.html">
+                <a href="../chapter04/01.html">
             
                     
                     其他API
@@ -368,9 +368,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="02.html">
+        <li class="chapter " data-level="1.5.2" data-path="../chapter04/02.html">
             
-                <a href="02.html">
+                <a href="../chapter04/02.html">
             
                     
                     类属性
@@ -381,9 +381,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3" data-path="03.html">
+        <li class="chapter " data-level="1.5.3" data-path="../chapter04/03.html">
             
-                <a href="03.html">
+                <a href="../chapter04/03.html">
             
                     
                     实例属性
@@ -638,9 +638,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../chapter08/00.html">
+        <li class="chapter " data-level="1.9" data-path="00.html">
             
-                <a href="../chapter08/00.html">
+                <a href="00.html">
             
                     
                     浅谈ES
@@ -652,9 +652,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../chapter08/01.html">
+        <li class="chapter " data-level="1.9.1" data-path="01.html">
             
-                <a href="../chapter08/01.html">
+                <a href="01.html">
             
                     
                     ES6 (ES2015)
@@ -665,9 +665,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../chapter08/02.html">
+        <li class="chapter " data-level="1.9.2" data-path="02.html">
             
-                <a href="../chapter08/02.html">
+                <a href="02.html">
             
                     
                     ES7 (ES2016)
@@ -678,9 +678,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="../chapter08/03.html">
+        <li class="chapter active" data-level="1.9.3" data-path="03.html">
             
-                <a href="../chapter08/03.html">
+                <a href="03.html">
             
                     
                     ES8 (ES2017)
@@ -691,9 +691,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="../chapter08/04.html">
+        <li class="chapter " data-level="1.9.4" data-path="04.html">
             
-                <a href="../chapter08/04.html">
+                <a href="04.html">
             
                     
                     ES9 (ES2018)
@@ -739,7 +739,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >实例属性</a>
+        <a href="../.." >ES8 (ES2017)</a>
     </h1>
 </div>
 
@@ -754,38 +754,102 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;">&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;</h1>
-<h2 id="props">props</h2>
-<p>  &#x7EC4;&#x4EF6;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x7236;&#x7EA7;&#x4F20;&#x5165;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;&#x3002;</p>
+                                <h1 id="es8-es2017">ES8 (ES2017)</h1>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x586B;&#x5145;">&#x5B57;&#x7B26;&#x4E32;&#x586B;&#x5145;</h2>
+<ul>
+<li><p>padStart</p>
+<p>&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#x586B;&#x5145;&#x5F53;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;<code>str.padStart(targetLength [, padString])</code></p>
+<ul>
+<li><p><code>targetLength</code>: &#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x9700;&#x8981;&#x586B;&#x5145;&#x5230;&#x7684;&#x76EE;&#x6807;&#x957F;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6570;&#x503C;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x672C;&#x8EAB;&#x3002;</p>
+</li>
+<li><p><code>padString</code>: &#x53EF;&#x9009;&#x3002;&#x586B;&#x5145;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x592A;&#x957F;&#xFF0C;&#x4F7F;&#x586B;&#x5145;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x8D85;&#x8FC7;&#x4E86;&#x76EE;&#x6807;&#x957F;&#x5EA6;&#xFF0C;&#x5219;&#x53EA;&#x4FDD;&#x7559;&#x6700;&#x5DE6;&#x4FA7;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x4F1A;&#x88AB;&#x622A;&#x65AD;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#xFF1A; <code>&apos;&apos;</code>;</p>
+</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-string">&apos;abc&apos;</span>.padStart(<span class="hljs-number">10</span>);         <span class="hljs-comment">// &quot;       abc&quot;</span>
+<span class="hljs-string">&apos;abc&apos;</span>.padStart(<span class="hljs-number">10</span>, <span class="hljs-string">&quot;foo&quot;</span>);  <span class="hljs-comment">// &quot;foofoofabc&quot;</span>
+<span class="hljs-string">&apos;abc&apos;</span>.padStart(<span class="hljs-number">6</span>,<span class="hljs-string">&quot;123465&quot;</span>); <span class="hljs-comment">// &quot;123abc&quot;</span>
+<span class="hljs-string">&apos;abc&apos;</span>.padStart(<span class="hljs-number">8</span>, <span class="hljs-string">&quot;0&quot;</span>);     <span class="hljs-comment">// &quot;00000abc&quot;</span>
+<span class="hljs-string">&apos;abc&apos;</span>.padStart(<span class="hljs-number">1</span>);          <span class="hljs-comment">// &quot;abc&quot;</span>
+</code></pre>
+</li>
+<li><p>padEnd</p>
+<p>&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4ECE;&#x672B;&#x5C3E;&#x5F00;&#x59CB;&#x586B;&#x5145;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E0E;<code>padStart</code>&#x76F8;&#x53CD;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A; <code>str.padEnd(targetLength [, padString])</code></p>
+<ul>
+<li><p><code>targetLength</code>: &#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x9700;&#x8981;&#x586B;&#x5145;&#x5230;&#x7684;&#x76EE;&#x6807;&#x957F;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6570;&#x503C;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x672C;&#x8EAB;&#x3002;</p>
+</li>
+<li><p><code>padString</code>: &#x53EF;&#x9009;&#x3002;&#x586B;&#x5145;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x592A;&#x957F;&#xFF0C;&#x4F7F;&#x586B;&#x5145;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x8D85;&#x8FC7;&#x4E86;&#x76EE;&#x6807;&#x957F;&#x5EA6;&#xFF0C;&#x5219;&#x53EA;&#x4FDD;&#x7559;&#x6700;&#x5DE6;&#x4FA7;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x4F1A;&#x88AB;&#x622A;&#x65AD;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#xFF1A; <code>&apos;&apos;</code>;</p>
+</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-string">&apos;abc&apos;</span>.padEnd(<span class="hljs-number">10</span>);          <span class="hljs-comment">// &quot;abc       &quot;</span>
+<span class="hljs-string">&apos;abc&apos;</span>.padEnd(<span class="hljs-number">10</span>, <span class="hljs-string">&quot;foo&quot;</span>);   <span class="hljs-comment">// &quot;abcfoofoof&quot;</span>
+<span class="hljs-string">&apos;abc&apos;</span>.padEnd(<span class="hljs-number">6</span>, <span class="hljs-string">&quot;123456&quot;</span>); <span class="hljs-comment">// &quot;abc123&quot;</span>
+<span class="hljs-string">&apos;abc&apos;</span>.padEnd(<span class="hljs-number">1</span>);           <span class="hljs-comment">// &quot;abc&quot;</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="objectvalues">Object.values</h2>
+<p>  <code>Object.values()</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6240;&#x4EE5;&#x7684;&#x503C;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
 <p>  &#x793A;&#x4F8B;&#xFF1A;</p>
-<p>  &#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</p>
-<pre><code class="lang-jsx">    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-      render() {
-        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>hello, {this.props.name}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-      }
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> obj = { foo: <span class="hljs-string">&apos;bar&apos;</span>, baz: <span class="hljs-number">100</span> };
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.values(obj)); <span class="hljs-comment">// [&apos;bar&apos;, 100]</span>
+</code></pre>
+<h2 id="objectentries">Object.entries</h2>
+<p>  <code>Object.entries()</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#x7ED9;&#x5B9A;&#x5BF9;&#x8C61;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x7EC4;&#x3002;</p>
+<p>  &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> obj = { foo: <span class="hljs-string">&apos;bar&apos;</span>, baz: <span class="hljs-number">100</span> };
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.entries(obj)); <span class="hljs-comment">// [[&quot;foo&quot;, &quot;bar&quot;], [&quot;baz&quot;, 100]]</span>
+</code></pre>
+<h2 id="objectgetownpropertydescriptors">Object.getOwnPropertyDescriptors</h2>
+<p>  <code>Object.getOwnPropertyDescriptors()</code> &#x65B9;&#x6CD5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x81EA;&#x8EAB;&#x5C5E;&#x6027;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</p>
+<p>  &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js">  <span class="hljs-built_in">Object</span>.getOwnPropertyDescriptors({foo: <span class="hljs-string">&apos;bar&apos;</span>, baz: <span class="hljs-number">100</span>})
+</code></pre>
+<p>  &#x7ED3;&#x679C;</p>
+<pre><code class="lang-js">  {
+    baz:{
+    configurable: <span class="hljs-literal">true</span>
+    enumerable: <span class="hljs-literal">true</span>
+    value: <span class="hljs-number">100</span>
+    writable: <span class="hljs-literal">true</span>
     }
-</code></pre>
-<p>  &#x8C03;&#x7528;&#x7EC4;&#x4EF6;</p>
-<pre><code class="lang-jsx">  &lt;HelloWorld name={<span class="hljs-string">&apos;React&apos;</span>}/&gt;
-</code></pre>
-<p>  &#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<code>this.props.children</code>.&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5728;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x5F00;&#x53D1;&#x4E2D;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x7EC4;&#x4EF6;&#x5D4C;&#x5957;&#x3001;&#x5305;&#x88F9;&#x4F1A;&#x7528;&#x5230;&#x3002;</p>
-<p>  &#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-jsx">  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Root</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-    render() {
-      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{this.props.children}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+  foo: {
+    configurable: <span class="hljs-literal">true</span>
+    enumerable: <span class="hljs-literal">true</span>
+    value: <span class="hljs-string">&quot;bar&quot;</span>
+    writable: <span class="hljs-literal">true</span>
     }
   }
 </code></pre>
-<p>  &#x5D4C;&#x5957;&#x4F7F;&#x7528;&#xFF1A;</p>
-<pre><code class="lang-jsx">  &lt;Root&gt;
-    &lt;div&gt;
-      children
-    &lt;/div&gt;
-  &lt;/Root&gt;
+<h2 id="&#x5F02;&#x6B65;&#x51FD;&#x6570;async">&#x5F02;&#x6B65;&#x51FD;&#x6570;Async</h2>
+<p>  <code>Async</code>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;&#x4EE5;&#x524D;&#x7684;&#x51FD;&#x6570;&#x56DE;&#x8C03;&#x6216;&#x8005;ES6&#x4E2D;&#x7684;<code>Promise()</code>&#x6765;&#x5B9E;&#x73B0;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#x3002;</p>
+<p>  &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span>
+      response1 = <span class="hljs-keyword">await</span> doSomething1(),
+      response2 = <span class="hljs-keyword">await</span> doSomething2(response1),
+      response3 = <span class="hljs-keyword">await</span> doSomething3(response2);
+  }
 </code></pre>
-<h2 id="state">state</h2>
-<p>  &#x7EC4;&#x4EF6;&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x7684;&#x6570;&#x636E;&#x3002;</p>
-<h5 id="&#x9996;&#x9875;--&#x4E0A;&#x4E00;&#x8282;"><a href="../../">&#x9996;&#x9875;</a> | <a href="02.html">&#x4E0A;&#x4E00;&#x8282;</a></h5>
+<h2 id="&#x7ED3;&#x5C3E;&#x9017;&#x53F7;">&#x7ED3;&#x5C3E;&#x9017;&#x53F7;</h2>
+<p>&#x4ECE;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x6570;&#x7EC4;&#x3001;&#x5BF9;&#x8C61;&#x3001;&#x53C2;&#x6570;&#x7B49;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7ED3;&#x5C3E;&#x53EF;&#x4EE5;&#x52A0; <code>,</code>.&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>,];
+
+<span class="hljs-keyword">const</span> b = {
+  a: <span class="hljs-number">1</span>,
+  b: <span class="hljs-number">2</span>,
+  c: <span class="hljs-number">3</span>,
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">c</span>(<span class="hljs-params">one,two,three,</span>) </span>{};
+</code></pre>
+<h2 id="sharearraybuffer&#x548C;atomics">ShareArrayBuffer&#x548C;Atomics</h2>
+<p>  &#x7528;&#x4E8E;&#x4ECE;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4F4D;&#x7F6E;&#x8BFB;&#x53D6;&#x548C;&#x5199;&#x5165;&#x3002;</p>
+<h5 id="&#x9996;&#x9875;--&#x4E0A;&#x4E00;&#x8282;--&#x4E0B;&#x4E00;&#x8282;"><a href="../../">&#x9996;&#x9875;</a> | <a href="02.html">&#x4E0A;&#x4E00;&#x8282;</a> | <a href="04.html">&#x4E0B;&#x4E00;&#x8282;</a></h5>
 
                                 
                                 </section>
@@ -813,12 +877,12 @@
 
             
                 
-                <a href="02.html" class="navigation navigation-prev " aria-label="Previous page: 类属性">
+                <a href="02.html" class="navigation navigation-prev " aria-label="Previous page: ES7 (ES2016)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../chapter05/00.html" class="navigation navigation-next " aria-label="Next page: React 高级用法">
+                <a href="04.html" class="navigation navigation-next " aria-label="Next page: ES9 (ES2018)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -829,7 +893,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"实例属性","level":"1.5.3","depth":2,"next":{"title":"React 高级用法","level":"1.6","depth":1,"path":"books/chapter05/00.md","ref":"./books/chapter05/00.md","articles":[{"title":"keys","level":"1.6.1","depth":2,"path":"books/chapter05/01.md","ref":"./books/chapter05/01.md","articles":[]},{"title":"事件","level":"1.6.2","depth":2,"path":"books/chapter05/02.md","ref":"./books/chapter05/02.md","articles":[]},{"title":"Refs","level":"1.6.3","depth":2,"path":"books/chapter05/03.md","ref":"./books/chapter05/03.md","articles":[]},{"title":"Fragment","level":"1.6.4","depth":2,"path":"books/chapter05/04.md","ref":"./books/chapter05/04.md","articles":[]},{"title":"Context","level":"1.6.5","depth":2,"path":"books/chapter05/05.md","ref":"./books/chapter05/05.md","articles":[]},{"title":"高阶组件","level":"1.6.6","depth":2,"path":"books/chapter05/06.md","ref":"./books/chapter05/06.md","articles":[]},{"title":"类型查检","level":"1.6.7","depth":2,"path":"books/chapter05/07.md","ref":"./books/chapter05/07.md","articles":[]}]},"previous":{"title":"类属性","level":"1.5.2","depth":2,"path":"books/chapter04/02.md","ref":"./books/chapter04/02.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/chapter04/03.md","mtime":"2018-09-26T06:05:12.656Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-06T05:46:22.431Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ES8 (ES2017)","level":"1.9.3","depth":2,"next":{"title":"ES9 (ES2018)","level":"1.9.4","depth":2,"path":"books/chapter08/04.md","ref":"./books/chapter08/04.md","articles":[]},"previous":{"title":"ES7 (ES2016)","level":"1.9.2","depth":2,"path":"books/chapter08/02.md","ref":"./books/chapter08/02.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/chapter08/03.md","mtime":"2018-11-04T07:52:18.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-06T05:46:22.431Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

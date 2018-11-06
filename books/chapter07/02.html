@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ES7（ES2016） · GitBook</title>
+        <title>打包 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -585,7 +585,7 @@
                 <a href="00.html">
             
                     
-                    浅谈ES
+                    React项目打包部署
             
                 </a>
             
@@ -599,7 +599,7 @@
                 <a href="01.html">
             
                     
-                    ES6（ES2015）
+                    与服务端交互
             
                 </a>
             
@@ -612,7 +612,7 @@
                 <a href="02.html">
             
                     
-                    ES7（ES2016）
+                    打包
             
                 </a>
             
@@ -625,7 +625,7 @@
                 <a href="03.html">
             
                     
-                    ES8（ES2017）
+                    部署
             
                 </a>
             
@@ -633,12 +633,70 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="04.html">
+
+            </ul>
             
-                <a href="04.html">
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter08/00.html">
+            
+                <a href="../chapter08/00.html">
             
                     
-                    ES9（ES2018）
+                    浅谈ES
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter08/01.html">
+            
+                <a href="../chapter08/01.html">
+            
+                    
+                    ES6 (ES2015)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter08/02.html">
+            
+                <a href="../chapter08/02.html">
+            
+                    
+                    ES7 (ES2016)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter08/03.html">
+            
+                <a href="../chapter08/03.html">
+            
+                    
+                    ES8 (ES2017)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter08/04.html">
+            
+                <a href="../chapter08/04.html">
+            
+                    
+                    ES9 (ES2018)
             
                 </a>
             
@@ -681,7 +739,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >ES7（ES2016）</a>
+        <a href="../.." >打包</a>
     </h1>
 </div>
 
@@ -696,34 +754,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="es7-es2016">ES7 (ES2016)</h1>
-<h2 id="exponentiation-operator">exponentiation operator</h2>
-<p><code>a ** b</code> &#x5E42;&#x8FD0;&#x7B97;&#xFF0C;&#x4E0E; <code>Math.pow(a, b)</code> &#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;</p>
-<p>&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> a = <span class="hljs-number">3</span>, b = <span class="hljs-number">3</span>;
-
-<span class="hljs-keyword">const</span> exp = a ** b;
-
-<span class="hljs-built_in">console</span>.log(exp); <span class="hljs-comment">// 27</span>
+                                <h1 id="react&#x9879;&#x76EE;&#x6253;&#x5305;">React&#x9879;&#x76EE;&#x6253;&#x5305;</h1>
+<p>&#x5F53;&#x4F60;&#x5F00;&#x53D1;&#x5B8C;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF0C;&#x6216;&#x8005;&#x9700;&#x8981;&#x4EA4;&#x4ED8;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x9879;&#x76EE;&#x6253;&#x5305;&#x3002;</p>
+<p>&#x6253;&#x5F00;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684; <code>package.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x5728; <code>scripts</code> &#x4E2D;&#x627E;&#x5230; <code>build</code>.</p>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x8FD0;&#x884C; <code>npm run build</code> &#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x662F;&#xFF0C;&#x6709;&#x4E9B;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x624B;&#x52A8;&#x590D;&#x5236;&#x5230;output&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x6253;&#x5305;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x80FD;&#x627E;&#x5230;&#x4F60;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;&#x5728;&#x9879;&#x76EE;&#x7684; <code>src/font</code> &#x4E2D;&#x5B58;&#x653E;&#x7740; <code>iconfont</code> &#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4F60;&#x6253;&#x5305;&#x51FA;&#x6765;&#x7684;&#x6587;&#x4EF6;&#x5C31;&#x4E0D;&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x3002;&#x9700;&#x8981;&#x4F60;&#x624B;&#x52A8;&#x590D;&#x5236;&#x4E00;&#x4E0B;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x4F60;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4E00;&#x4E2A; <code>npm</code> &#x547D;&#x4EE4;&#xFF0C;&#x81EA;&#x52A8; <code>copy</code>&#x3002;</p>
+<p>  &#x7B2C;&#x4E00;&#xFF0C;&#x5B89;&#x88C5; copyfiles</p>
+<pre><code class="lang-bash">  $ npm i copyfiles --dev
 </code></pre>
-<h2 id="arrayprototypeincludes">Array.prototype.includes</h2>
-<p>&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x662F;&#x5426;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x503C;&#xFF0C;&#x8FD4;&#x56DE; <code>true</code> &#x6216;&#x8005; <code>false</code>&#x3002;</p>
-<p>&#x8BED;&#x6CD5;&#xFF1A; </p>
-<p><code>arr.includes(searchElement[, fromIndex])</code></p>
-<ul>
-<li><p><code>searchElement</code> &#x9700;&#x8981;&#x67E5;&#x627E;&#x7684;&#x5143;&#x7D20;&#x503C;&#x3002;</p>
-</li>
-<li><p><code>fromIndex</code> &#x53EF;&#x9009;&#x3002;&#x4ECE;&#x8BE5;&#x7D22;&#x5F15;&#x5904;&#x5F00;&#x59CB;&#x67E5;&#x627E;&#x3002;&#x5982;&#x679C;&#x4E3A;&#x8D1F;&#x503C;&#xFF0C;&#x5219;&#x6309;&#x5347;&#x5E8F;&#x4ECE; <code>array.length - fromIndex</code> &#x7684;&#x7D22;&#x5F15;&#x5F00;&#x59CB;&#x641C;&#x7D22;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>0</code>&#x3002;</p>
-</li>
-</ul>
-<p>&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-js">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].includes(<span class="hljs-number">2</span>);     <span class="hljs-comment">// true</span>
-[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].includes(<span class="hljs-number">4</span>);     <span class="hljs-comment">// false</span>
-[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].includes(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>);  <span class="hljs-comment">// false</span>
-[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].includes(<span class="hljs-number">3</span>, <span class="hljs-number">-1</span>); <span class="hljs-comment">// true</span>
-[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-literal">NaN</span>].includes(<span class="hljs-literal">NaN</span>); <span class="hljs-comment">// true</span>
+<p>  &#x7B2C;&#x4E8C;&#xFF0C;&#x5728;<code>scripts</code>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>copy</code>&#x547D;&#x4EE4;</p>
+<pre><code class="lang-json">  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;copy&quot;</span>: <span class="hljs-string">&quot;copyfiles -f ./src/font /dist&quot;</span>
+  }
 </code></pre>
-<h5 id="&#x9996;&#x9875;--&#x4E0A;&#x4E00;&#x8282;--&#x4E0B;&#x4E00;&#x8282;"><a href="../../">&#x9996;&#x9875;</a> | <a href="01.html">&#x4E0A;&#x4E00;&#x8282;</a> | <a href="03.html">&#x4E0B;&#x4E00;&#x8282;</a></h5>
+<p>  &#x7B2C;&#x4E09;&#xFF0C;&#x4FEE;&#x6539; <code>build</code> &#x547D;&#x4EE4;</p>
+<pre><code class="lang-json">  <span class="hljs-string">&quot;scripts&quot;</span>: {
+      <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;react-scripts build &amp;&amp; npm run copy&quot;</span>,
+      <span class="hljs-string">&quot;copy&quot;</span>: <span class="hljs-string">&quot;copyfiles -f ./src/font /dist&quot;</span>
+  }
+</code></pre>
+<blockquote>
+<p>&#x653E;&#x5728; <code>public</code> &#x6587;&#x4EF6;&#x5939;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6253;&#x5305;&#x65F6;&#x90FD;&#x4F1A;&#x9ED8;&#x8BA4;&#x88AB;&#x590D;&#x5236;&#x5230; <code>output</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</p>
+</blockquote>
 
                                 
                                 </section>
@@ -751,12 +806,12 @@
 
             
                 
-                <a href="01.html" class="navigation navigation-prev " aria-label="Previous page: ES6（ES2015）">
+                <a href="01.html" class="navigation navigation-prev " aria-label="Previous page: 与服务端交互">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="03.html" class="navigation navigation-next " aria-label="Next page: ES8（ES2017）">
+                <a href="03.html" class="navigation navigation-next " aria-label="Next page: 部署">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -767,7 +822,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ES7（ES2016）","level":"1.8.2","depth":2,"next":{"title":"ES8（ES2017）","level":"1.8.3","depth":2,"path":"books/chapter07/03.md","ref":"./books/chapter07/03.md","articles":[]},"previous":{"title":"ES6（ES2015）","level":"1.8.1","depth":2,"path":"books/chapter07/01.md","ref":"./books/chapter07/01.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/chapter07/02.md","mtime":"2018-11-04T03:53:28.762Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-05T09:42:29.646Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"打包","level":"1.8.2","depth":2,"next":{"title":"部署","level":"1.8.3","depth":2,"path":"books/chapter07/03.md","ref":"./books/chapter07/03.md","articles":[]},"previous":{"title":"与服务端交互","level":"1.8.1","depth":2,"path":"books/chapter07/01.md","ref":"./books/chapter07/01.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/chapter07/02.md","mtime":"2018-11-06T03:58:35.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-06T05:46:22.431Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
