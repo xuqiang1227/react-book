@@ -805,23 +805,26 @@
 <p>  <code>render()</code>&#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0D;&#x80FD;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x6709;&#x7C7B;&#x4F3C;<code>setState()</code>&#x8FD9;&#x6837;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
 <p>  &#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x6709;&#xFF1A;</p>
 <ul>
-<li><code>null</code>&#x3001;<code>String</code>&#x3001;<code>Number</code>&#x3001;<code>Array</code>&#x3001;<code>Boolean</code>&#x3002;</li>
-<li>React elements</li>
-<li>Fragment</li>
+<li><p><code>null</code>&#x3001;<code>String</code>&#x3001;<code>Number</code>&#x3001;<code>Array</code>&#x3001;<code>Boolean</code>&#x3002;</p>
+</li>
+<li><p>React elements</p>
+</li>
+<li><p>Fragment</p>
+</li>
 <li><p>Portal</p>
+</li>
+</ul>
 <blockquote>
-<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;<code>undefined</code>.</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;<code>undefined</code>&#x3002;</p>
 </blockquote>
 <p>&#x5F53;<code>shouldComponentUpdate()</code>&#x8FD4;&#x56DE;<code>false</code>&#x65F6;&#xFF0C;&#x65E0;&#x8BBA;<code>state</code>&#x548C;<code>props</code>&#x6709;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x4E0D;&#x6267;&#x884C;&#x3002;</p>
 <p>&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code class="lang-jsx">render() {
-<span class="hljs-keyword">return</span> (
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{this.state.color}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{this.state.color}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
 }
 </code></pre>
-</li>
-</ul>
 </li>
 <li><p>componentDidMount()</p>
 <p><code>componentDidMount()</code>&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x7EC4;&#x4EF6;&#x52A0;&#x8F7D;&#x5B8C;&#x540E;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F53;&#x8BE5;&#x7EC4;&#x4EF6;&#x76F8;&#x5173;&#x7684;<code>dom</code>&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;<code>dom</code>&#x6811;&#x4E2D;&#x65F6;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x4E2D;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;</p>
@@ -880,7 +883,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"装载","level":"1.3.1","depth":2,"next":{"title":"更新","level":"1.3.2","depth":2,"path":"chapter02/02.md","ref":"./chapter02/02.md","articles":[]},"previous":{"title":"组件生命周期","level":"1.3","depth":1,"path":"chapter02/00.md","ref":"./chapter02/00.md","articles":[{"title":"装载","level":"1.3.1","depth":2,"path":"chapter02/01.md","ref":"./chapter02/01.md","articles":[]},{"title":"更新","level":"1.3.2","depth":2,"path":"chapter02/02.md","ref":"./chapter02/02.md","articles":[]},{"title":"卸载","level":"1.3.3","depth":2,"path":"chapter02/03.md","ref":"./chapter02/03.md","articles":[]},{"title":"异常处理","level":"1.3.4","depth":2,"path":"chapter02/04.md","ref":"./chapter02/04.md","articles":[]},{"title":"React.Component","level":"1.3.5","depth":2,"path":"chapter02/05.md","ref":"./chapter02/05.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./books","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"小翼","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React 基础学习资料","language":"zh-hans","links":{"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true}},"gitbook":"*"},"file":{"path":"chapter02/01.md","mtime":"2018-11-06T09:44:47.686Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-07T06:07:17.597Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"装载","level":"1.3.1","depth":2,"next":{"title":"更新","level":"1.3.2","depth":2,"path":"chapter02/02.md","ref":"./chapter02/02.md","articles":[]},"previous":{"title":"组件生命周期","level":"1.3","depth":1,"path":"chapter02/00.md","ref":"./chapter02/00.md","articles":[{"title":"装载","level":"1.3.1","depth":2,"path":"chapter02/01.md","ref":"./chapter02/01.md","articles":[]},{"title":"更新","level":"1.3.2","depth":2,"path":"chapter02/02.md","ref":"./chapter02/02.md","articles":[]},{"title":"卸载","level":"1.3.3","depth":2,"path":"chapter02/03.md","ref":"./chapter02/03.md","articles":[]},{"title":"异常处理","level":"1.3.4","depth":2,"path":"chapter02/04.md","ref":"./chapter02/04.md","articles":[]},{"title":"React.Component","level":"1.3.5","depth":2,"path":"chapter02/05.md","ref":"./chapter02/05.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./books","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"小翼","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React 基础学习资料","language":"zh-hans","links":{"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true}},"gitbook":"*"},"file":{"path":"chapter02/01.md","mtime":"2018-11-07T07:16:50.456Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-07T07:17:53.446Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
