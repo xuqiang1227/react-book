@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>State Hooks · React 基础学习资料</title>
+        <title>State Hooks useState · React 基础学习资料</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,6 +56,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="02.html" />
     
     
     <link rel="prev" href="00.html" />
@@ -739,7 +741,20 @@
                 <a href="01.html">
             
                     
-                    State Hooks
+                    State Hooks useState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    State Hooks useReducer
             
                 </a>
             
@@ -782,7 +797,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >State Hooks</a>
+        <a href=".." >State Hooks useState</a>
     </h1>
 </div>
 
@@ -797,7 +812,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="state-hooks">State Hooks</h1>
+                                <h1 id="state-hooks-usestate">State Hooks useState</h1>
 <p>&#x9996;&#x5148;&#x770B;&#x4E00;&#x4E2A;React&#x65E2;&#x6709;&#x7684;&#x7248;&#x672C;&#x57FA;&#x4E8E; <code>class</code> &#x7684;&#x7EC4;&#x4EF6;.</p>
 <pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
 
@@ -883,10 +898,14 @@
 
             
                 
-                <a href="00.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: React Hooks">
+                <a href="00.html" class="navigation navigation-prev " aria-label="Previous page: React Hooks">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="02.html" class="navigation navigation-next " aria-label="Next page: State Hooks useReducer">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -895,7 +914,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"State Hooks","level":"1.10.1","depth":2,"previous":{"title":"React Hooks","level":"1.10","depth":1,"path":"chapter09/00.md","ref":"./chapter09/00.md","articles":[{"title":"State Hooks","level":"1.10.1","depth":2,"path":"chapter09/01.md","ref":"./chapter09/01.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./books","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"小翼","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React 基础学习资料","language":"zh-hans","links":{"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true}},"gitbook":"*"},"file":{"path":"chapter09/01.md","mtime":"2018-11-09T08:24:07.155Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T06:24:30.971Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"State Hooks useState","level":"1.10.1","depth":2,"next":{"title":"State Hooks useReducer","level":"1.10.2","depth":2,"path":"chapter09/02.md","ref":"./chapter09/02.md","articles":[]},"previous":{"title":"React Hooks","level":"1.10","depth":1,"path":"chapter09/00.md","ref":"./chapter09/00.md","articles":[{"title":"State Hooks useState","level":"1.10.1","depth":2,"path":"chapter09/01.md","ref":"./chapter09/01.md","articles":[]},{"title":"State Hooks useReducer","level":"1.10.2","depth":2,"path":"chapter09/02.md","ref":"./chapter09/02.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./books","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"小翼","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React 基础学习资料","language":"zh-hans","links":{"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true}},"gitbook":"*"},"file":{"path":"chapter09/01.md","mtime":"2020-03-08T07:58:59.726Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-08T09:13:35.560Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -903,6 +922,10 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
