@@ -866,11 +866,60 @@
 <li><p>&#x66F4;&#x65B0; <code>state</code> &#x4E0D;&#x518D;&#x4F7F;&#x7528; <code>setState</code> &#x65B9;&#x6CD5;&#x3002;</p>
 </li>
 </ul>
+<p><a href="https://codesandbox.io/s/pwzj74k5nq" target="_blank">&#x5728;&#x7EBF;&#x793A;&#x4F8B;</a></p>
 <p>&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A; <code>state</code> &#x600E;&#x4E48;&#x5B9A;&#x4E49;&#x5462;&#xFF1F;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> [count, setCount] = useState(<span class="hljs-number">0</span>);
 <span class="hljs-keyword">const</span> [name, setName] = useState(<span class="hljs-literal">null</span>);
 </code></pre>
-<p><a href="https://codesandbox.io/s/pwzj74k5nq" target="_blank">&#x5728;&#x7EBF;&#x793A;&#x4F8B;</a></p>
+<p>&#x9664;&#x4E9B;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6765;&#x5904;&#x7406;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> initialState = {
+  username: <span class="hljs-literal">null</span>,
+  mobile: <span class="hljs-literal">null</span>,
+  email: <span class="hljs-literal">null</span>,
+  password: <span class="hljs-literal">null</span>,
+  submit: <span class="hljs-literal">false</span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> () =&gt; {
+
+  <span class="hljs-keyword">const</span> [state, setState] = useState(initialState);
+
+  <span class="hljs-keyword">const</span> onChange = (e, type) =&gt; {
+    setState({ ...state, [type]: e.target.value });
+  }
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div className=&quot;example-rooter&quot;&gt;
+      &lt;div&gt;
+        &lt;span&gt;&#x7528;&#x6237;&#xFF1A;&lt;/span&gt;&lt;input value={state.username} onChange={e =&gt; onChange(e, &apos;username&apos;)} /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;span&gt;&#x7535;&#x8BDD;&#xFF1A;&lt;/span&gt;&lt;input value={state.mobile} onChange={e =&gt; onChange(e, &apos;mobile&apos;)} /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;span&gt;&#x90AE;&#x7BB1;&#xFF1A;&lt;/span&gt;&lt;input value={state.email} onChange={e =&gt; onChange(e, &apos;email&apos;)} /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;span&gt;&#x5BC6;&#x7801;&#xFF1A;&lt;/span&gt;&lt;input type={&apos;password&apos;} value={state.password} onChange={e =&gt; onChange(e, &apos;password&apos;)} /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;button onClick={() =&gt; setState({ ...state, &apos;submit&apos;: !state.submit })}&gt;&#x63D0;&#x4EA4;&lt;/button&gt;
+      &lt;/div&gt;
+      {
+        state.submit &amp;&amp;
+        &lt;React.Fragment&gt;
+          &lt;p&gt;&#x60A8;&#x8F93;&#x5165;&#x7684;&#x4FE1;&#x606F;&#x662F;&#xFF1A;&lt;/p&gt;
+          &lt;span&gt;&#x7528;&#x6237;&#x540D;&#xFF1A;{state.username}&lt;/span&gt;
+          &lt;span&gt;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#xFF1A;{state.mobile}&lt;/span&gt;
+          &lt;span&gt;&#x90AE;&#x7BB1;&#xFF1A;{state.email}&lt;/span&gt;
+          &lt;span&gt;&#x5BC6;&#x7801;&#xFF1A;{state.password}&lt;/span&gt;
+        &lt;/React.Fragment&gt;
+      }
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<p><a href="https://codesandbox.io/s/multiplestates-52oo3" target="_blank">&#x5728;&#x7EBF;&#x793A;&#x4F8B;</a></p>
 
                                 
                                 </section>
@@ -914,7 +963,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"State Hooks useState","level":"1.10.1","depth":2,"next":{"title":"State Hooks useReducer","level":"1.10.2","depth":2,"path":"chapter09/02.md","ref":"./chapter09/02.md","articles":[]},"previous":{"title":"React Hooks","level":"1.10","depth":1,"path":"chapter09/00.md","ref":"./chapter09/00.md","articles":[{"title":"State Hooks useState","level":"1.10.1","depth":2,"path":"chapter09/01.md","ref":"./chapter09/01.md","articles":[]},{"title":"State Hooks useReducer","level":"1.10.2","depth":2,"path":"chapter09/02.md","ref":"./chapter09/02.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./books","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"小翼","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React 基础学习资料","language":"zh-hans","links":{"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true}},"gitbook":"*"},"file":{"path":"chapter09/01.md","mtime":"2020-03-08T07:58:59.726Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-08T09:13:35.560Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"State Hooks useState","level":"1.10.1","depth":2,"next":{"title":"State Hooks useReducer","level":"1.10.2","depth":2,"path":"chapter09/02.md","ref":"./chapter09/02.md","articles":[]},"previous":{"title":"React Hooks","level":"1.10","depth":1,"path":"chapter09/00.md","ref":"./chapter09/00.md","articles":[{"title":"State Hooks useState","level":"1.10.1","depth":2,"path":"chapter09/01.md","ref":"./chapter09/01.md","articles":[]},{"title":"State Hooks useReducer","level":"1.10.2","depth":2,"path":"chapter09/02.md","ref":"./chapter09/02.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./books","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"小翼","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React 基础学习资料","language":"zh-hans","links":{"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true}},"gitbook":"*"},"file":{"path":"chapter09/01.md","mtime":"2020-03-09T08:06:29.881Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-09T08:08:41.080Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -922,10 +971,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
